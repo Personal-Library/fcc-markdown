@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import './App.css';
+import initialText from './defaultmd.js';
+import gfm from 'remark-gfm';
 
-function App() {
+const App = () => {
+  const [text, setText] = useState(initialText);
+
+  const handleChange = (event) => {
+    setText(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="input wrapper">
+        <textarea onChange={handleChange} value={text} id="editor"/>
+      </div>
+      <div className="output wrapper" id="preview">
+        <ReactMarkdown source={text} plugins={[gfm]}/>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

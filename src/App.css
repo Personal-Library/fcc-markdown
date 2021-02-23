@@ -30,7 +30,7 @@ textarea {
 .output {
   background-color: #FFFBE6;
   padding: 1em;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {

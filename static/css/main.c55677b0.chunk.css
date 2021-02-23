@@ -1,2 +1,0 @@
-body{background-color:#b9e4c9}textarea{box-sizing:border-box;padding:1em;resize:none;background-color:#fffbe6;border-radius:10px;border:none;width:100%;height:100%}.container{display:flex;justify-content:space-evenly}.wrapper{box-sizing:border-box;border:4px solid #fd5523;border-radius:10px;width:45vw;min-height:90vh;margin:10px 0}.output{background-color:#fffbe6;padding:1em;overflow:scroll}@media (max-width:768px){.container{flex-direction:column;align-items:center}.wrapper{width:90vw}}
-/*# sourceMappingURL=main.c55677b0.chunk.css.map */
